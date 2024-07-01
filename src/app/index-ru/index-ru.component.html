@@ -1,0 +1,250 @@
+<header class="bg-black text-white shadow-md">
+    <div id="home" class="container mx-auto px-4 py-2 flex items-center justify-between">
+        <!-- Logo and Restaurant Name -->
+        <div class="flex items-center">
+            <a href="/ru/#home">    <img src="../../assets/Дизайн без названия 2.svg" alt="Restaurant Logo" class="h-14 mr-2"></a>
+        </div>
+        
+        <!-- Navigation Links -->
+        <nav class="hidden md:flex space-x-4">
+            <a href="/ru/#who-we-are" class="hover:text-white  hover:bg-slate-800 active:bg-slate-700 rounded-full cursor-pointer p-2">О нас</a>
+            <a href="/ru/#staff" class="hover:text-white  hover:bg-slate-800 active:bg-slate-700 rounded-full cursor-pointer p-2">Персонал</a>
+            <a href="/ru/#vine" class="hover:text-white  hover:bg-slate-800 active:bg-slate-700 rounded-full cursor-pointer  p-2">Вино</a>
+            <a href="/ru/#kitchen" class="hover:text-white  hover:bg-slate-800 active:bg-slate-700 rounded-full cursor-pointer  p-2">Кухня</a>
+           <a href="/ru/#contacts" class="hover:text-white  hover:bg-slate-800 active:bg-slate-700 rounded-full cursor-pointer  p-2">Бронирование</a>
+            <a href="/ru/#contacts" class="hover:text-white  hover:bg-slate-900 active:bg-slate-700 rounded-full cursor-pointer  p-2">Частные Мероприятия</a>
+            <a href="/ru/#contacts" class="hover:text-white  hover:bg-slate-900 active:bg-slate-700 rounded-3xl cursor-pointer  p-2">Контакты</a>
+        </nav>
+  
+        <!-- Language and Social Media Icons -->
+        <div class="flex items-center space-x-4">
+          <button (click)="languageMenuShowing()" class=" md:inline-block text-sm hover:bg-slate-500 active:bg-slate-700 cursor-pointer rounded-full px-1 py-1">RU</button>
+          <ul *ngIf="LanguageMenuShow" class="absolute z-50 bg-black p-5 gap-3 rounded-md top-12 flex flex-col">
+           <li><a href="/en/">EN</a></li>
+           <li><a href="/it/">IT</a></li>
+           <li><a href="/fr/">FR</a></li>
+           <li><a href="/ua/">UA</a></li>
+           <li><a href="/ru/">RU</a></li>
+          </ul> <a href="https://www.instagram.com/bellambriana_restaurant/"> <img src="../../assets/mdi_instagram.svg" alt="Instagram" class="h-6  hover:bg-slate-700 active:bg-slate-800 rounded-full cursor-pointer"></a>
+           
+          <a href="https://www.facebook.com/profile.php?id=61561624013215"> <img src="../../assets/Facebook.svg" alt="Facebook" class="h-6  hover:bg-slate-700 active:bg-slate-800 rounded-full cursor-pointer"></a> </div>
+  
+        <!-- Mobile Menu Toggle -->
+        <div *ngIf="!MobileMenuShow" class="md:hidden ">
+          <button (click)="mobileMenuShowing()" class="text-white focus:outline-none p-1 hover:bg-slate-700 active:bg-slate-800 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                  <path fill-rule="evenodd" d="M3 18a1 1 0 0 0 1 1h16a1 1 0 0 0 0-2H4a1 1 0 0 0-1 1zm0-5a1 1 0 0 0 1 1h16a1 1 0 0 0 0-2H4a1 1 0 0 0-1 1zm0-6a1 1 0 0 0 1 1h16a1 1 0 0 0 0-2H4a1 1 0 0 0-1 1z"/>
+              </svg>
+          </button>
+      </div>      
+      <nav *ngIf="MobileMenuShow" class="flex absolute z-50 top-3 flex-col left-0 bg-black p-5 text-left md:hidden gap-2">
+          <button (click)="mobileMenuShowing()" class="text-white focus:outline-none p-1 hover:bg-slate-700 active:bg-slate-800 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                  <path fill-rule="evenodd" d="M3 18a1 1 0 0 0 1 1h16a1 1 0 0 0 0-2H4a1 1 0 0 0-1 1zm0-5a1 1 0 0 0 1 1h16a1 1 0 0 0 0-2H4a1 1 0 0 0-1 1zm0-6a1 1 0 0 0 1 1h16a1 1 0 0 0 0-2H4a1 1 0 0 0-1 1z"/>
+              </svg>
+          </button>
+          <a href="/en/#who-we-are" class="hover:text-white  hover:bg-slate-800 active:bg-slate-700 rounded-full cursor-pointer p-2">About us</a>
+          <a href="/en/#staff" class="hover:text-white  hover:bg-slate-800 active:bg-slate-700 rounded-full cursor-pointer p-2">Staff</a>
+
+          <a href="/en/#vine" class="hover:text-white  hover:bg-slate-800 active:bg-slate-700 rounded-full cursor-pointer  p-2">Winery</a>
+          <a href="/en/#kitchen" class="hover:text-white  hover:bg-slate-800 active:bg-slate-700 rounded-full cursor-pointer  p-2">Kitchen</a>
+          <a href="/en/#contacts" class="hover:text-white  hover:bg-slate-800 active:bg-slate-700 rounded-full cursor-pointer  p-2">Reservations</a>
+          <a href="/en/#contacts" class="hover:text-white  hover:bg-slate-900 active:bg-slate-700 rounded-full cursor-pointer  p-2">Private events</a>
+          <a href="/en/#contacts" class="hover:text-white  hover:bg-slate-900 active:bg-slate-700 rounded-3xl cursor-pointer  p-2">Contacts</a>
+      </nav>
+    </div>
+  </header>
+  
+  <div class="max-h-[88vh] w-full overflow-hidden relative top-0 left-0  ">
+    <img class="relative z-10 top-0 left-0 w-full h-auto brightness-50" autoplay loop muted src="./assets/Staff.jpg" />
+    <img class="z-30 absolute top-[20vh] left-[28%]  h-[50%] w-auto content-center items-center brightness-125"
+      src="./assets/Дизайн без названия 2.svg">
+  </div>
+  <div class="m-auto  bg-black ">
+    <div id="Ristorante"
+      class="flex xs:pt-9 xs:px-14 xs:flex-col  xs:justify-center xs:gap-2 md:flex-row md:justify-center md:gap-28 lg:gap-36 items-center bg-black text-white  overflow-hidden  ">
+      <img class="justify-center items-center bg-black rounded-lg max-w-[45vw] md:max-h-[50vh] lg:max-h-[70vh] "
+        src="./assets/piatto_black.png">
+  
+      <div id="we_are" class=" items-center overflow-hidden  xs:text-left md:max-w-[40vw]  ">
+        <span class="font-bold uppercase xs:text-base md:text-xl  lg:text-2xl">Кто такая Белла Мбриана</span>
+        <p class=" md:text-base xs:text-base xs:items-center pb-9 ">
+  
+            <br>
+            Белла Мбриана — добрая душа, которая любит быть в компании.<br>
+            имеет привычку врываться в чужие дома; однако его намерения совершенно иные.<br><br>
+            На самом деле Bella Mbriana руководствуется благородной и доброжелательной целью, а именно – принести гармонию в дом.
+            <br>
+            <br>
+            Однако, как и все духи,
+она немного капризна и склонна отдавать предпочтение только тем людям, которые ей симпатичны.
+            <br>
+            <br>
+            Тот, кто принимает ее визит, должен чувствовать себя очень польщенным: Белла Мбриана помогает только хорошим и благодарным людям.
+            за то, что у них есть.
+    
+    
+            <br>
+            <br>Сегодня Беллу Мбриану считают защитницей дома и семьи.
+            <br> <br> ПОЭТОМУ ОСТЕРЕГАЙТЕСЬ, КОГДА ВЫ ГОВОРИТЕ О НАС ПЛОХО ..............
+        </p>
+        <div class="flex gap-5 ">
+            <button
+              class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden   xs:text-sm md:text-base font-medium text-white rounded-lg group bg-gradient-to-br from-red-700 to-red-500 group-hover:from-red-600 hover:from-red-600 group-hover:to-red-700 hover:to-red-700 hover:text-white dark:text-white focus:outline-none  active:from-red-500 active:to-red-700 ">
+              <span
+                class="uppercase relative px-4 py-1.5  transition-all ease-in duration-75  rounded-sm group-hover:bg-opacity-0">
+                Vini
+              </span>
+            </button>
+           
+    
+          </div>
+      </div>
+  
+    </div>
+  
+    <div id="staff"  class="container mx-auto px-4 py-8">
+      <div class="flex flex-col md:flex-row md:space-x-8 space-y-8 ">
+        <div class="w-full my-auto md:w-1/2">
+          <img src="../../assets/Staff.jpg" alt="Dish" class="w-full h-auto md:w-1/2 mx-auto my-auto rounded-lg shadow-lg">
+        </div>
+        <div class="w-full md:w-1/2 flex flex-col justify-center">
+            <h2 class="text-2xl text-white font-semibold mb-4">STAFF</h2>.
+            <p class="text-white leading-relaxed">
+                Персонал Bella Mbriana встретит вас от начала и до конца, 
+                Мы хотим, чтобы вы чувствовали себя изнеженными, прислушиваясь даже к самым требовательным запросам.
+            </p>
+            <p class="text-white leading-relaxed mt-4">
+                От выбора сырья до
+                до мельчайших деталей - все это находится в роскошном
+                и сдержанности на первом этаже здания конца XIX века.
+            </p>
+            <p class="text-white leading-relaxed mt-4">
+                Мы тщательно выбирали, что вам предложить, чтобы подарить вам лучшие
+                гастрономический и энологический опыт.
+            </p>
+            <p class="text-white leading-relaxed mt-4">
+                Мы предлагаем наш профессионализм и радушие,
+                но также дружелюбие и улыбку - вот качества Bella Mbriana,
+                Одним словом, относитесь к нам серьезно, но с улыбкой.
+        </p>
+      </div>
+  
+    </div>
+    
+  
+    <div class="pl-20 pr-20 bg-black">
+      <div class="flex gap-9  bg-black h-[50vh]  items-center overflow-y-hidden overflow-x-scroll "
+        *ngIf="images && images.length > 0">
+        <img class=" gap-9 w-[320px] h-[214px] rounded-lg " *ngFor="let image of images" [src]="image.imageSrc"
+          [alt]="image.imageDescription">
+      </div>
+    </div>
+  
+    <div id="vine"  class="container mx-auto px-4 py-8">
+      <div class="flex flex-col md:flex-row md:space-x-8 space-y-8 ">
+        <div class="w-full my-auto md:w-1/2">
+          <img src="../../assets/Piatto_1.jpg" alt="Dish" class="w-full h-auto md:w-1/2 mx-auto my-auto rounded-lg shadow-lg">
+        </div>
+        <div class="w-full md:w-1/2 flex flex-col justify-center">
+            <h2 class="text-2xl text-white font-semibold mb-4">ВИНО</h2>
+            <p class="text-white leading-relaxed">
+              Мы предлагаем широкий выбор из около 350 отборных этикеток.
+              Нам нравится заставлять вас пить, но еще больше - наслаждаться, поэтому мы начинаем с выбора
+              вин из региона Кампания, вдохновленных истоками кухни,
+              далее мы переходим к широкому выбору лигурийских вин, учитывая место их происхождения
+              затем к Альта Ланге, Франчакорте, Шампани, Италии, Франции, Греции, Новой
+              Испания, Бургундия.
+            </p>
+            <p class="text-white leading-relaxed mt-4">
+              Наше энологическое путешествие познакомит вас с небольшими, захватывающими винодельческими хозяйствами.
+              и крупными устоявшимися винодельческими хозяйствами, которые можно попробовать в их лучшие годы.
+              Сочетание редкости и качества.
+            </p>
+            <p class="text-white leading-relaxed mt-4">
+              Вскоре мы также предложим нашим клиентам возможность увидеть наш подземный погреб, где вы сможете
+              вместе с нами приобщиться к миру энологии. Мы будем постоянно обновлять ассортимент для вашего
+              вкуса.
+          </p>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  <div id="kitchen"  class="container mx-auto px-4 py-8">
+    <div class="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
+      <div class="w-full my-auto md:w-1/2">
+        <img src="../../assets/Chef.jpg" alt="Dish" class="w-full h-auto md:w-1/2 mx-auto my-auto rounded-lg shadow-lg">
+      </div>
+      <div class="w-full md:w-1/2 flex flex-col justify-center">
+        <h2 class="text-2xl text-white font-semibold mb-4">КУХНЯ</h2>
+        <p class="text-white leading-relaxed">
+          Уроженец Парфенопеи, шеф-повар дебютировал в 15 лет.
+          Деля свое время между школой и первыми сезонными работами, он продолжал год за годом
+          год за годом на кухнях известных отелей в разных городах Северной Италии.
+          Страсть и упорство к этой работе помогли ему медленно расти, получая
+          сменяя друг друга, и именно эта целеустремленность привела его
+          на соседний Лазурный берег, где, в Монтекарло и окрестных деревнях.
+          он совершенствует свое видение кухни, средиземноморской, парфенопейской, но всегда следящей за тем, чтобы
+          традиции
+          остаются главными. Сегодня шеф-повар готов оставить свой след в этом городе.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container flex mx-auto px-4 justify-center py-8">
+    <div class="flex flex-col md:flex-row gap-12  md:space-x-4  space-y-4 md:space-y-0">
+      <div class="w-full md:w-1/2 ">
+        <video controls class="w-auto max-h-[40vh] rounded-md">
+          <source src="./assets/Video_1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="w-full md:w-1/2">
+        <video controls class="w-auto max-h-[40vh] rounded-md">
+          <source src="./assets/Video_2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+  
+  <div id="contacts" class="flex bg-black text-white  pb-12 xs:px-4 justify-center align-middle items-center " id="footer">
+  
+    <a><img id="contacts" class="h-[20vh] xs:hidden md:flex " src="./assets/Дизайн без названия 2.svg"></a>
+    <div class="mt-14">
+      <div class=" mx-auto px-4 md:px-8 lg:px-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Часы Работы</h3>
+            <p>Закрыто в Четверг</p>
+            
+            <p>Обед: только по субботам с 12:30 до 14:30</p>
+            <p>Ужин: понедельник - воскресенье 19:00 - 23:00</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Как нас найти</h3>
+            <p>Via Nino Bixio, 31, 18038 Sanremo IM</p>
+            <p>Над Spaccanapoli*</p>
+            <h3 class="text-xl font-semibold mb-4 pt-4">Работа с нами</h3>
+            <p>Email: <a href="mailto:info@bellambrianarestaurant.com"
+                class="text-blue-400">info&#64;bellambrianarestaurant.com</a></p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Как с нами связаться</h3>
+            <p>Email: <a href="mailto:info@bellambrianarestaurant.com"
+                class="text-blue-400">info&#64;bellambrianarestaurant.com</a></p>
+            <p>Телефон: <a href="tel:+390184951145" class="text-blue-400">+39 0184 951 145</a></p>
+            <div class="flex gap-3 pt-3 justify-start ">
+              Социальные сети:
+              <a><img class="h-[3vh] w-[3vw] items-center" src="./assets/mdi_instagram.svg" /></a>
+              <a><img class="h-[3vh] w-[3vw] items-center " src="./assets/Facebook.svg" /></a>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  
+  </div>
