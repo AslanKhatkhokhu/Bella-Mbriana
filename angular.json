@@ -101,9 +101,12 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "@angular-devkit/build-angular:browser"
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
